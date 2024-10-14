@@ -1,67 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- This part sets up the webpage -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max's 11th Birthday Celebration</title>
-    <!-- Google Fonts: Roboto (400 & 700 weights) -->
+    <!-- These lines bring in a special font called Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Custom styles -->
+    <!-- This line connects our special birthday styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header: Contains main birthday information -->
+    <!-- This is the top part of our birthday page -->
     <header>
         <h1 id="birthday-title">Max's 11th Birthday Bash 🎉</h1>
+        <!-- This shows Max's picture -->
         <img id="max-img" src="images/max.jpg" alt="Max's portrait">
         <h2 id="bday-age">Turning 11 years old</h2>
         <h3 id="bday-date">October 19, 2024</h3>
+        <!-- This will show a countdown to the birthday -->
+        <div id="countdown"></div>
     </header>
     
-    <!-- Main content: Gift sections -->
+    <!-- This is where all the birthday surprises are -->
     <main>
-        <!-- Gift section 1: Excitement -->
+        <!-- Each section is a different birthday surprise -->
         <section class="gift-section">
             <h2 class="gift-title">How excited we are for your big day! 🥳</h2>
             <p class="gift-hint">(Hover or tap on the gift)</p>
+            <!-- This gift image changes when you hover over it -->
             <div class="gift-img" id="gift-img-excited"></div>
         </section>
         
-        <!-- Gift section 2: Max's entrance -->
+        <!-- More gift sections, each with a different surprise -->
         <section class="gift-section">
             <h2 class="gift-title">When Max enters the room 😎</h2>
             <div class="gift-img" id="gift-img-enters"></div>
         </section>
         
-        <!-- Gift section 3: One word description -->
         <section class="gift-section">
             <h2 class="gift-title">If we had to describe Max in ONE word 👇</h2>
             <div class="gift-img" id="gift-img-oneword"></div>
         </section>
         
-        <!-- Gift section 4: Max's superpower -->
         <section class="gift-section">
             <h2 class="gift-title">Max's superpower 💪</h2>
             <div class="gift-img" id="gift-img-superpower"></div>
         </section>
         
-        <!-- Gift section 5: Future adventures -->
         <section class="gift-section">
             <h2 class="gift-title">To many more adventures, Max! 🚀</h2>
             <div class="gift-img" id="gift-img-adventure"></div>
         </section>
     </main>
     
-    <!-- Footer: Credits and course link -->
+    <!-- This is the bottom of the page -->
     <footer>
         <p>Created with love for Max's 11th birthday 💖</p>
         <p>
+            <!-- This is a link to learn how to make your own birthday site -->
             <a href="https://scrimba.com/learn/htmlandcss" target="_blank" rel="noopener noreferrer">
                 Want to create your own Birthday GIFt site? Take this HTML & CSS course.
             </a>
         </p>
     </footer>
+    <!-- This part makes the countdown work -->
+    <script>
+        // This function updates the countdown every second
+        function updateCountdown() {
+            // Set the date we're counting down to
+            const birthday = new Date("2024-10-19T00:00:00").getTime();
+            // Get today's date and time
+            const now = new Date().getTime();
+            // Find how much time is left
+            const timeLeft = birthday - now;
+
+            // Calculate days, hours, minutes and seconds left
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Show the countdown on the page
+            document.getElementById("countdown").innerHTML = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // When the countdown is over, show "Happy Birthday!"
+            if (timeLeft < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").innerHTML = "Happy Birthday, Max!";
+            }
+        }
+
+        // This makes the countdown update every second
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Start the countdown right away
+    </script>
+
 </body>
 </html>
