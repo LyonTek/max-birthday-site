@@ -1,46 +1,51 @@
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Gradient background */
     color: #ffffff;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
+/* Typography: Add text shadow to all headings and paragraphs */
 h1, h2, h3, h4, p {
     text-shadow: 0 0 1px black;
 }
 
-#max-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #ffffff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    margin: 20px auto;  /* Centers the image horizontally */
-    display: block;     /* Ensures margin auto works for centering */
-}
-
-#bday-age, #bday-date {
-    font-weight: 400;
-    margin: 10px 0;
+/* Header styles */
+#birthday-title, #bday-age, #bday-date {
     text-align: center;
     width: 100%;
 }
 
+/* Max's portrait image */
+#max-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure image fills the circular container */
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    display: block;
+}
+
+/* Main content container */
 main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Gift section styles */
 .gift-section {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.1); /* Semi-transparent white */
     border-radius: 10px;
+    text-align: center;
     padding: 20px;
     margin-bottom: 30px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Blur effect for modern browsers */
 }
 
 .gift-title {
@@ -53,49 +58,47 @@ main {
     margin-bottom: 15px;
 }
 
+/* Gift image container */
 .gift-img {
-    height: 300px;
+    width: 100%;
+    height: 400px;
+    background-image: url('images/max-gift-cover.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 6px solid white;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Hover effect for gift images */
 .gift-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-#gift-img-excited { background-image: url('images/excited.gif'); }
-#gift-img-cool { background-image: url('images/cool.gif'); }
-#gift-img-awesome { background-image: url('images/awesome.gif'); }
-#gift-img-superpower { background-image: url('images/superpower.gif'); }
-#gift-img-future { background-image: url('images/future.gif'); }
+/* Individual gift images (revealed on hover) */
+#gift-img-excited:hover { background-image: url('images/max-blake-excited.jpg'); }
+#gift-img-enters:hover { background-image: url('images/max-enters.gif'); }
+#gift-img-oneword:hover { background-image: url('images/max-oneword.jpg'); }
+#gift-img-superpower:hover { background-image: url('images/max-superpower.jpg'); }
+#gift-img-adventure:hover { background-image: url('images/max-adventure.jpg'); }
 
+/* Footer styles */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.1); /* Semi-transparent black */
     margin-top: 50px;
 }
 
+/* Link styles */
 a {
     color: white;
+    text-decoration: none;
 }
 
-/* 
-Add the footer paragraph according to the design. 
-Configure the anchor tag to open the link in a new tab.
-Forgotten how to do it? Google it! 
-
-Link: 
-https://scrimba.com/learn/htmlandcss
-
-Text:
-Want to create your own Birthday GIFt site? Take this HTML & CSS course.
-*/
-
-#birthday-title {
-    text-align: center;
-    width: 100%;
-    /* Any other styles you want to apply */
+a:hover {
+    text-decoration: underline;
 }
