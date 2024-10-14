@@ -1,23 +1,31 @@
-<<<<<<< HEAD
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# Max's Birthday Site
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+This is a celebratory website created for Max's 11th birthday. It features interactive gift sections that reveal special images when hovered over.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## Features
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+- Responsive design
+- Interactive gift sections
+- Custom CSS animations
 
-Happy Coding!
-=======
-# Birthday-Site
->>>>>>> 66b0a1646a6e9e36937cc2d5544c259829012725
+## Technologies Used
+
+- HTML5
+- CSS3
+
+## How to View
+
+You can view the live site at: [Your Netlify URL here]
+
+## Local Development
+
+To run this project locally:
+
+1. Clone the repository
+2. Open `index.html` in your browser
+
+## Credits
+
+Created with love for Max's 11th birthday 💖
+
+Inspired by the Scrimba HTML and CSS course.
