@@ -1,0 +1,101 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, p {
+    text-shadow: 0 0 1px black;
+}
+
+#max-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin: 20px auto;  /* Centers the image horizontally */
+    display: block;     /* Ensures margin auto works for centering */
+}
+
+#bday-age, #bday-date {
+    font-weight: 400;
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gift-section {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.gift-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.gift-hint {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.gift-img {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.gift-img:hover {
+    transform: scale(1.05);
+}
+
+#gift-img-excited { background-image: url('images/excited.gif'); }
+#gift-img-cool { background-image: url('images/cool.gif'); }
+#gift-img-awesome { background-image: url('images/awesome.gif'); }
+#gift-img-superpower { background-image: url('images/superpower.gif'); }
+#gift-img-future { background-image: url('images/future.gif'); }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
+
+a {
+    color: white;
+}
+
+/* 
+Add the footer paragraph according to the design. 
+Configure the anchor tag to open the link in a new tab.
+Forgotten how to do it? Google it! 
+
+Link: 
+https://scrimba.com/learn/htmlandcss
+
+Text:
+Want to create your own Birthday GIFt site? Take this HTML & CSS course.
+*/
+
+#birthday-title {
+    text-align: center;
+    width: 100%;
+    /* Any other styles you want to apply */
+}
